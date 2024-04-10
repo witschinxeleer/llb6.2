@@ -1,13 +1,12 @@
 const { app } = require('@azure/functions');
 const cars = require('./cars.json');
 
-
-app.http('Cars', {
-    route:"cars",
-    methods: ['GET'],
+app.http('UpdateCar', {
+    methods: ['PATCH'],
     authLevel: 'anonymous',
     handler: async (request, context) => {
-        return {body:JSON.stringify(cars)};
 
+
+        return { body: `Hello, ${name}!` };
     }
 });
