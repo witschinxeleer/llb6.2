@@ -1,8 +1,8 @@
 const { app } = require('@azure/functions');
-
 const cars = require('./cars.json');
+
 app.http('DeleteCar', {
-    route: '/cars/:id',
+    route: 'cars/:id',
     methods: ['DELETE'],
     authLevel: 'anonymous',
     handler: async (request, context) => {

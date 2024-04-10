@@ -8,6 +8,5 @@ app.http('Cars', {
     authLevel: 'anonymous',
     handler: async (request, context) => {
         return {body:JSON.stringify(cars)};
-
     }
 });

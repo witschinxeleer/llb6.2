@@ -2,6 +2,7 @@ const { app } = require('@azure/functions');
 const cars = require('./cars.json');
 
 app.http('GetCarsByID', {
+    route:'cars/:id',
     methods: ['GET'],
     authLevel: 'anonymous',
     handler: async (request, context) => {
