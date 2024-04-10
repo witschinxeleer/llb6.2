@@ -23,7 +23,7 @@ cars =[
 
 app.http('Cars', {
     route:"cars",
-    methods: ['GET', 'POST'],
+    methods: ['GET'],
     authLevel: 'anonymous',
     handler: async (request, context) => {
         context.log(`Http function processed request for url "${request.url}"`);
@@ -32,7 +32,7 @@ app.http('Cars', {
         // request.json(cars)
 
         // return { body: `Hello, ${name}!` };
-        return {body:JSON.stringify()};
+        return {body:JSON.stringify(cars)};
 
     }
 });
